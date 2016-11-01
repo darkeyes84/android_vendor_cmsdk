@@ -1575,6 +1575,26 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Option to hide the Bluetooth icon in the status bar when disconnected.
+	     * @hide
+         */
+        public static final String SHOW_BLUETOOTH_ICON = "show_bluetooth_icon";
+
+        /** @hide */
+        public static final Validator SHOW_BLUETOOTH_ICON_VALIDATOR =
+                sBooleanValidator;
+
+        /**
+         * Option to hide the alarm icon in the expanded status bar.
+	     * @hide
+         */
+        public static final String SHOW_NEXT_ALARM_ICON = "show_next_alarm_icon";
+
+        /** @hide */
+        public static final Validator SHOW_NEXT_ALARM_ICON_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to allow one finger quick settings expansion on the side of the statusbar.
          * 0 = 0ff, 1 = right, 2 = left
          */
@@ -1976,6 +1996,8 @@ public final class CMSettings {
                 CMSettings.System.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
                 CMSettings.System.SHOW_ALARM_ICON,
                 CMSettings.System.STATUS_BAR_IME_SWITCHER,
+                CMSettings.System.SHOW_BLUETOOTH_ICON,
+                CMSettings.System.SHOW_NEXT_ALARM_ICON,
                 CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
                 CMSettings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                 CMSettings.System.VOLBTN_MUSIC_CONTROLS,
@@ -2131,6 +2153,8 @@ public final class CMSettings {
             VALIDATORS.put(LOCKSCREEN_ROTATION, LOCKSCREEN_ROTATION_VALIDATOR);
             VALIDATORS.put(SHOW_ALARM_ICON, SHOW_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_IME_SWITCHER, STATUS_BAR_IME_SWITCHER_VALIDATOR);
+            VALIDATORS.put(SHOW_BLUETOOTH_ICON, SHOW_BLUETOOTH_ICON_VALIDATOR);
+            VALIDATORS.put(SHOW_NEXT_ALARM_ICON, SHOW_NEXT_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
