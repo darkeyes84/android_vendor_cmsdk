@@ -1605,6 +1605,16 @@ public final class CMSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
+         * Option to hide the alarm icon in the expanded status bar.
+	     * @hide
+         */
+        public static final String STATUS_BAR_SMART_PULLDOWN = "qs_smart_pulldown";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_SMART_PULLDOWN_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 3);
+
+        /**
          * Whether to show the brightness slider in quick settings panel.
          * 0 = 0ff, 1 = on
          */
@@ -2019,6 +2029,7 @@ public final class CMSettings {
                 CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
                 CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                 CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                CMSettings.System.STATUS_BAR_SMART_PULLDOWN,
                 CMSettings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
                 CMSettings.System.SYSTEM_PROFILES_ENABLED,
                 CMSettings.System.INCREASING_RING,
@@ -2157,6 +2168,7 @@ public final class CMSettings {
             VALIDATORS.put(SHOW_NEXT_ALARM_ICON, SHOW_NEXT_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_SMART_PULLDOWN, STATUS_BAR_SMART_PULLDOWN_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
