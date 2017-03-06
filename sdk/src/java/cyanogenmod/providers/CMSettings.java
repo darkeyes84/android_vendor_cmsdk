@@ -1575,6 +1575,16 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Option to disable the animation on nav bar
+	     * @hide
+         */
+        public static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
+
+        /** @hide */
+        public static final Validator PIXEL_NAV_ANIMATION_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Option to hide the Bluetooth icon in the status bar when disconnected.
 	     * @hide
          */
@@ -2006,6 +2016,7 @@ public final class CMSettings {
                 CMSettings.System.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
                 CMSettings.System.SHOW_ALARM_ICON,
                 CMSettings.System.STATUS_BAR_IME_SWITCHER,
+                CMSettings.System.PIXEL_NAV_ANIMATION,
                 CMSettings.System.SHOW_BLUETOOTH_ICON,
                 CMSettings.System.SHOW_NEXT_ALARM_ICON,
                 CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
@@ -2164,6 +2175,7 @@ public final class CMSettings {
             VALIDATORS.put(LOCKSCREEN_ROTATION, LOCKSCREEN_ROTATION_VALIDATOR);
             VALIDATORS.put(SHOW_ALARM_ICON, SHOW_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_IME_SWITCHER, STATUS_BAR_IME_SWITCHER_VALIDATOR);
+            VALIDATORS.put(PIXEL_NAV_ANIMATION, PIXEL_NAV_ANIMATION_VALIDATOR);
             VALIDATORS.put(SHOW_BLUETOOTH_ICON, SHOW_BLUETOOTH_ICON_VALIDATOR);
             VALIDATORS.put(SHOW_NEXT_ALARM_ICON, SHOW_NEXT_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
