@@ -1498,6 +1498,16 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Option to disable the low battery notification
+         * @hide
+         */
+        public static final String BATTERY_LOW_NOTIFICATION = "battery_low_notification";
+
+        /** @hide */
+        public static final Validator BATTERY_LOW_NOTIFICATION_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Show WiFi SSID in status bar
          * @hide
          */
@@ -1505,6 +1515,16 @@ public final class CMSettings {
 
         /** @hide */
         public static final Validator WIFI_STATUS_BAR_SSID_VALIDATOR =
+                sBooleanValidator;
+
+        /**
+         * Show carrier label in status bar
+         * @hide
+         */
+        public static final String STATUS_BAR_SHOW_CARRIER = "status_bar_show_carrier";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_SHOW_CARRIER_VALIDATOR =
                 sBooleanValidator;
 
         /**
@@ -2020,7 +2040,9 @@ public final class CMSettings {
                 CMSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
                 CMSettings.System.STATUS_BAR_SHOW_WEATHER,
                 CMSettings.System.RECENTS_SHOW_SEARCH_BAR,
+                CMSettings.System.BATTERY_LOW_NOTIFICATION,
                 CMSettings.System.WIFI_STATUS_BAR_SSID,
+                CMSettings.System.STATUS_BAR_SHOW_CARRIER,
                 CMSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
                 CMSettings.System.T9_SEARCH_INPUT_LOCALE,
                 CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES,
@@ -2178,7 +2200,9 @@ public final class CMSettings {
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_SHOW_WEATHER, STATUS_BAR_SHOW_WEATHER_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
+            VALIDATORS.put(BATTERY_LOW_NOTIFICATION, BATTERY_LOW_NOTIFICATION_VALIDATOR);
             VALIDATORS.put(WIFI_STATUS_BAR_SSID, WIFI_STATUS_BAR_SSID_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_SHOW_CARRIER, STATUS_BAR_SHOW_CARRIER_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
             VALIDATORS.put(BLUETOOTH_ACCEPT_ALL_FILES, BLUETOOTH_ACCEPT_ALL_FILES_VALIDATOR);
