@@ -1508,6 +1508,16 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Option to disable the low battery notification
+         * @hide
+         */
+        public static final String BATTERY_SAVER_MODE_COLOR = "battery_saver_mode_color";
+
+        /** @hide */
+        public static final Validator BATTERY_SAVER_MODE_COLOR_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Show WiFi SSID in status bar
          * @hide
          */
@@ -2041,6 +2051,7 @@ public final class CMSettings {
                 CMSettings.System.STATUS_BAR_SHOW_WEATHER,
                 CMSettings.System.RECENTS_SHOW_SEARCH_BAR,
                 CMSettings.System.BATTERY_LOW_NOTIFICATION,
+                CMSettings.System.BATTERY_SAVER_MODE_COLOR,
                 CMSettings.System.WIFI_STATUS_BAR_SSID,
                 CMSettings.System.STATUS_BAR_SHOW_CARRIER,
                 CMSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
@@ -2201,6 +2212,7 @@ public final class CMSettings {
             VALIDATORS.put(STATUS_BAR_SHOW_WEATHER, STATUS_BAR_SHOW_WEATHER_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
             VALIDATORS.put(BATTERY_LOW_NOTIFICATION, BATTERY_LOW_NOTIFICATION_VALIDATOR);
+            VALIDATORS.put(BATTERY_SAVER_MODE_COLOR, BATTERY_SAVER_MODE_COLOR_VALIDATOR);
             VALIDATORS.put(WIFI_STATUS_BAR_SSID, WIFI_STATUS_BAR_SSID_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_SHOW_CARRIER, STATUS_BAR_SHOW_CARRIER_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
