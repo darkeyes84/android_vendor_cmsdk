@@ -1538,6 +1538,16 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Hide carrier label when WiFI is showing
+         * @hide
+         */
+        public static final String HIDE_CARRIER_LABEL_WITH_WIFI = "hide_carrier_label_with_wifi";
+
+        /** @hide */
+        public static final Validator HIDE_CARRIER_LABEL_WITH_WIFI_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether navigation bar is placed on the left side in landscape mode
          * 0 = 0ff, 1 = on
          */
@@ -2054,6 +2064,7 @@ public final class CMSettings {
                 CMSettings.System.BATTERY_SAVER_MODE_COLOR,
                 CMSettings.System.WIFI_STATUS_BAR_SSID,
                 CMSettings.System.STATUS_BAR_SHOW_CARRIER,
+                CMSettings.System.HIDE_CARRIER_LABEL_WITH_WIFI,
                 CMSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
                 CMSettings.System.T9_SEARCH_INPUT_LOCALE,
                 CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES,
@@ -2215,6 +2226,7 @@ public final class CMSettings {
             VALIDATORS.put(BATTERY_SAVER_MODE_COLOR, BATTERY_SAVER_MODE_COLOR_VALIDATOR);
             VALIDATORS.put(WIFI_STATUS_BAR_SSID, WIFI_STATUS_BAR_SSID_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_SHOW_CARRIER, STATUS_BAR_SHOW_CARRIER_VALIDATOR);
+            VALIDATORS.put(HIDE_CARRIER_LABEL_WITH_WIFI, HIDE_CARRIER_LABEL_WITH_WIFI_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
             VALIDATORS.put(BLUETOOTH_ACCEPT_ALL_FILES, BLUETOOTH_ACCEPT_ALL_FILES_VALIDATOR);
