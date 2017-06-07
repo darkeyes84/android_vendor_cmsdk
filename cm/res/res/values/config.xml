@@ -54,10 +54,10 @@
 
     <!-- Default values for LiveDisplay -->
     <integer name="config_dayColorTemperature">6500</integer>
-    <integer name="config_nightColorTemperature">4800</integer>
+    <integer name="config_nightColorTemperature">6500</integer>
     <integer name="config_outdoorAmbientLux">12000</integer>
     <integer name="config_outdoorAmbientLuxHysteresis">1500</integer>
-    <integer name="config_defaultLiveDisplayMode">2</integer>
+    <integer name="config_defaultLiveDisplayMode">4</integer>
 
     <!-- These values should map to the true min and max
          that the backend is capable of adjusting to. This
