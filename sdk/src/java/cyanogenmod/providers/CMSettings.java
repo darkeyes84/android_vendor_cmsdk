@@ -1232,6 +1232,17 @@ public final class CMSettings {
         public static final Validator BATTERY_LIGHT_ENABLED_VALIDATOR =
                 sBooleanValidator;
 
+		/**
+         * Whether the battery light should be enabled with screen on
+         * The value is boolean (1 or 0).
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_SCREEN_ON = "battery_light_screen_on";
+
+        /** @hide */
+        public static final Validator BATTERY_LIGHT_SCREEN_ON_VALIDATOR =
+                sBooleanValidator;
+
         /**
          * Whether the battery LED should repeatedly flash when the battery is low
          * on charge. The value is boolean (1 or 0).
@@ -2035,6 +2046,7 @@ public final class CMSettings {
                 CMSettings.System.STYLUS_ICON_ENABLED,
                 CMSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
                 CMSettings.System.BATTERY_LIGHT_ENABLED,
+                CMSettings.System.BATTERY_LIGHT_SCREEN_ON,
                 CMSettings.System.BATTERY_LIGHT_PULSE,
                 CMSettings.System.BATTERY_LIGHT_LOW_COLOR,
                 CMSettings.System.BATTERY_LIGHT_MEDIUM_COLOR,
@@ -2195,6 +2207,7 @@ public final class CMSettings {
             VALIDATORS.put(TORCH_LONG_PRESS_POWER_TIMEOUT,
                     TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_SCREEN_ON, BATTERY_LIGHT_SCREEN_ON_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_PULSE, BATTERY_LIGHT_PULSE_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_LOW_COLOR, BATTERY_LIGHT_LOW_COLOR_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_MEDIUM_COLOR, BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR);
