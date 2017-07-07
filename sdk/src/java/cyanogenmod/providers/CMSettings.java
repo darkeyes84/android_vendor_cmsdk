@@ -863,6 +863,24 @@ public final class CMSettings {
         public static final Validator ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR = sBooleanValidator;
 
         /**
+         * Whether the battery light will be allowed when in zen mode during downtime
+         * @hide
+         */
+        public static final String ZEN_ALLOW_BATTERY_LIGHTS = "allow_battery_lights";
+
+        /** @hide */
+        public static final Validator ZEN_ALLOW_BATTERY_LIGHTS_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Whether the battery light will be allowed when in zen priority mode during downtime
+         * @hide
+         */
+        public static final String ZEN_PRIORITY_ALLOW_BATTERY_LIGHTS = "zen_priority_allow_battery_lights";
+
+        /** @hide */
+        public static final Validator ZEN_PRIORITY_ALLOW_BATTERY_LIGHTS_VALIDATOR = sBooleanValidator;
+
+        /**
          * Whether vibrations are allowed when in zen priority mode during downtime
          * 0: no vibrations
          * 1: vibrations for calls only
@@ -2121,6 +2139,7 @@ public final class CMSettings {
                 CMSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
                 CMSettings.System.HEADSET_CONNECT_PLAYER,
                 CMSettings.System.ZEN_ALLOW_LIGHTS,
+                CMSettings.System.ZEN_ALLOW_BATTERY_LIGHTS,
                 CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
         };
 
@@ -2295,6 +2314,8 @@ public final class CMSettings {
             VALIDATORS.put(HEADSET_CONNECT_PLAYER, HEADSET_CONNECT_PLAYER_VALIDATOR);
             VALIDATORS.put(ZEN_ALLOW_LIGHTS, ZEN_ALLOW_LIGHTS_VALIDATOR);
             VALIDATORS.put(ZEN_PRIORITY_ALLOW_LIGHTS, ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR);
+            VALIDATORS.put(ZEN_ALLOW_BATTERY_LIGHTS, ZEN_ALLOW_BATTERY_LIGHTS_VALIDATOR);
+            VALIDATORS.put(ZEN_PRIORITY_ALLOW_BATTERY_LIGHTS, ZEN_PRIORITY_ALLOW_BATTERY_LIGHTS_VALIDATOR);
             VALIDATORS.put(ZEN_PRIORITY_VIBRATION_MODE, ZEN_PRIORITY_VIBRATION_VALIDATOR);
             VALIDATORS.put(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
                     TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK_VALIDATOR);
