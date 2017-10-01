@@ -1228,6 +1228,18 @@ public final class CMSettings {
         public static final Validator TORCH_LONG_PRESS_POWER_GESTURE_VALIDATOR = sBooleanValidator;
 
         /**
+         * Check proximity sensor before activating
+         * torchlight on power long-pressed
+         * The value is boolean (1 or 0).
+         * @hide
+         */
+        public static final String TORCH_LONG_PRESS_POWER_PROXIMITY =
+                "torch_long_press_power_proximity";
+
+        /** @hide */
+        public static final Validator TORCH_LONG_PRESS_POWER_PROXIMITY_VALIDATOR = sBooleanValidator;
+
+        /**
          * When the torch has been turned on by long press on power,
          * automatically turn off after a configurable number of seconds.
          * The value is an integer number of seconds in the range 0-3600.
@@ -2234,6 +2246,8 @@ public final class CMSettings {
                     SWAP_VOLUME_KEYS_ON_ROTATION_VALIDATOR);
             VALIDATORS.put(TORCH_LONG_PRESS_POWER_GESTURE,
                     TORCH_LONG_PRESS_POWER_GESTURE_VALIDATOR);
+            VALIDATORS.put(TORCH_LONG_PRESS_POWER_PROXIMITY,
+                    TORCH_LONG_PRESS_POWER_PROXIMITY_VALIDATOR);
             VALIDATORS.put(TORCH_LONG_PRESS_POWER_TIMEOUT,
                     TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
